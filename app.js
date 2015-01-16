@@ -2,8 +2,8 @@
 	"use strict";
 	var readout = document.getElementById("readout");
 	function update() {
-		if (typeof TiltProvider !== 'undefined' && !!TiltProvider) {
-			readout.innerHTML = "coodrinates: " + TiltProvider.getTiltX() + " : " + TiltProvider.getTiltY();
+		if (typeof OrientationProvider !== 'undefined' && !!OrientationProvider) {
+			readout.innerHTML = "coodrinates: " + OrientationProvider.getOrientation();
 		}
 		requestAnimationFrame(update);
 	}
