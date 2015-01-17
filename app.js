@@ -4,11 +4,12 @@
 	var circle = document.getElementById("circle");
 	function update() {
 		if (typeof OrientationProvider !== 'undefined' && !!OrientationProvider) {
+			var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+			var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+			document.getElementById("screen-size").innerHTML = "width: " + w + " height: " + h;
 			var orientationString = OrientationProvider.getOrientation();
 			readout.innerHTML = "acceleration: " + orientationString;
 			var orientation = eval(orientationString);
-			var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
-			var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
 			var r = circle.style.borderRadius;
 			var l = (-orientation[0] + 10) / 20;
 			var t = (orientation[1] + 10) / 20;
