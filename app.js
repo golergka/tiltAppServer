@@ -5,7 +5,7 @@
 	function update() {
 		if (typeof OrientationProvider !== 'undefined' && !!OrientationProvider) {
 			var orientationString = OrientationProvider.getOrientation();
-			readout.innerHTML = "coodrinates: " + orientationString;
+			readout.innerHTML = "acceleration: " + orientationString;
 			var orientation = eval(orientationString);
 			var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
 			var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
