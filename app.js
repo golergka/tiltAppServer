@@ -13,8 +13,8 @@
 			var r = circle.style.borderRadius;
 			var l = (-orientation[0] + 10) / 20;
 			var t = (orientation[1] + 10) / 20;
-			circle.style.left = l * w + "px";
-			circle.style.top = t * h + "px";
+			circle.style.left = l * (w - r) + "px";
+			circle.style.top = t * (h - r) + "px";
 			document.getElementById("debug").innerHTML = "l: " + l + " t: " + t + " circle.style.left: " + circle.style.left + " circle.style.top: " + circle.style.top;
 		}
 		requestAnimationFrame(update);
