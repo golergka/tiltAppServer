@@ -4,8 +4,12 @@
 	var circle = document.getElementById("circle");
 	function update() {
 		if (typeof OrientationProvider !== 'undefined' && !!OrientationProvider) {
+			/*
 			var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
 			var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+			*/
+			var w = screen.width;
+			var h = screen.height;
 			document.getElementById("screen-size").innerHTML = "width: " + w + " height: " + h;
 			var orientationString = OrientationProvider.getOrientation();
 			readout.innerHTML = "acceleration: " + orientationString;
